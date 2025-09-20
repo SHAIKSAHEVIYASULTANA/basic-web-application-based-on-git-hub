@@ -1,0 +1,74 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Basic Online Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">OS</div>
+        <div>
+          <h1>Online Shop — Demo</h1>
+          <div class="muted" style="font-size:13px">Simple demo: HTML + CSS + JS</div>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="search" placeholder="Search products (try 'mug' or 'shirt')" />
+      </div>
+
+      <div class="cart-btn" onclick="toggleCart()" title="Open cart">
+        <span>🛒</span>
+        <div>
+          <div id="cartCount">0</div>
+          <div class="muted" style="font-size:12px">Cart</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="products">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0">Products</h2>
+          <div class="muted" id="resultsInfo">Showing 0 items</div>
+        </div>
+
+        <div class="grid" id="productGrid"></div>
+      </section>
+
+      <aside class="cart" id="cartPanel">
+        <h2>Your Cart</h2>
+        <div class="cart-list" id="cartList">
+          <div class="muted">Cart is empty — add something from the products.</div>
+        </div>
+        <div class="total" id="totalRow">
+          <div>Total</div>
+          <div id="totalAmount">₹0.00</div>
+        </div>
+
+        <div class="checkout">
+          <h3 style="margin:10px 0 6px">Checkout (demo)</h3>
+          <input id="name" placeholder="Full name" />
+          <input id="email" placeholder="Email address" />
+          <textarea id="address" rows="3" placeholder="Shipping address"></textarea>
+          <button class="btn" onclick="checkout()">Place order</button>
+          <button class="btn ghost" style="margin-left:8px" onclick="clearCart()">Clear cart</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      This is a demo. No payments are processed.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
